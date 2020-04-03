@@ -1,38 +1,10 @@
 <h1 align="center">Webcam Face and Gender Recognition</h1>
-<p>A Python script who works with OpenCV and Face Recognition to recognize persons and his genders. The person are predicted by Face Recognition, an API for this (obviously), and the gender are predicted by one method from Deep Neural Network from Open CV, who receives an Neural Network. The script will analyse one image in the folder of person (you can have n persons), and he will return the 128-dimension face encoding for each face in the image, after this he will go to predict the gender with the neural network, we have three arrays of importants data:</b></p>
-<ol>
-    <li>
-        <h3>known_face_encodings:</h3>
-        <pre><code>
-known_face_encodings = [
-    person1_face_encoding,
-    person2_face_encoding
-]</code></pre>
-            <p>This array will contain the face_encodings, who will used to comparison with the webcam video</p>
-    </li>
-    <li>
-        <h3>known_face_names:</h3>
-        <pre><code>known_face_names = [
-    "Person 1 Name",
-    "Person 2 Name"
-]</code></pre>
-            <p>This array will contain the name of persons, they are the target of model.</p>
-    </li>
-    <li>
-        <h3>known_gender:</h3>
-        <pre><code>known_gender = [
-    person1_gender,
-    person2_gender
-]</code></pre>
-            <p>This array will contain the genders of persons, they are predicted by the function <b>predictGender()</b></p>
-    </li>
-</ol>
-<p>With this three arrays the script can make comparisons and send outputs.</p>
-<br>
+<div align="center"><img src="./images/header.jpg" alt="header"></div>
+<p>This Python scripts aims to recognize persons and his genders. It works with OpenCV and Face Recognition API. By Face Recognition a person is predicted and the gender is estimated using Deep Neural Network from Open CV. The script shall analise one image inside a specific folder (with one or n persons), and will return the 128-dimension face encoding for each face in the image. After it predict the gender using the neural network.</b></p>
 <h2>Requirements</h2>
 <ul>
     <li>
-        <a href="https://www.python.org/downloads/">Python 3.3+ or 2.7</a>
+        <a href="https://www.python.org/downloads/">Python 3.6</a>
     </li><br>
     <li>
         <a href="https://docs.opencv.org/master/d6/d00/tutorial_py_root.html">OpenCV</a>
@@ -44,6 +16,8 @@ known_face_encodings = [
     </li>
     <li>
         <a href="http://dlib.net/">Dlib</a>
+        <pre><code>pip install dlib</code></pre>
+        <p>If you are in Windows and the first method does not do, try this:</p>
         <pre><code>python -m pip install https://files.pythonhosted.org/packages/0e/ce/f8a3cff33ac03a8219768f0694c5d703c8e037e6aba2e865f9bae22ed63c/dlib-19.8.1-cp36-cp36m-win_amd64.whl#sha256=794994fa2c54e7776659fddb148363a5556468a6d5d46be8dad311722d54bfcf</code></pre>
     </li>
     <li>
@@ -56,27 +30,20 @@ known_face_encodings = [
     </li>
 </ul>
 <h2>How to run?</h2>
-<p>You can run the script, putting an image to folder personX (where x are number of the person) and editing the name of this person in variable <pre><code>known_face_names</pre></code>
-<p>and setting his path to variables<pre><code>personX_image
-personX_gender</code></pre></p>
-<h3>Example: </h3>
-<pre><code>
-known_face_names = [
-    "Matheus",
-]
-
-person1_image = face_recognition.load_image_file("./person1/matheus.JPG")
-person1_face_encoding = face_recognition.face_encodings(person1_image)[0]
-person1_gender = predictGender("./person1/matheus.JPG")
-</code></pre>
-
-<h2>One person recognitions</h2>
+<p> First of all, you must put the photos of people in the "persons" folder, the image file must have the person's name. For example, if I wanted Elon Musk to be recognized, I would have to put a photo of him in the persons folder with the file name "Elon Musk". It is essential that the file name is the way the program should call the person. </p>
+<p> After that you can just run the script inside the project's folder: </p>
+<pre> <code>
+     python webcam-face-recognition.py
+</code> </pre>
+<p> This will open a window called Face Recognition, which will recognize and distinguish people according to the photos in the persons folder. If you want to close the window just press <b>"q"</b>.</p>
+<h2>Examples:</h2>
+<h3>One person recognitions</h3>
 <img src="./images//one_person.jpg" alt="one-person">
 
-<h2>Two persons recognitions</h2>
+<h3>Two persons recognitions</h3>
 <img src="./images//two_persons.jpg" alt="two-persons">
 
 <h2>Questions or Issues</h2>
-<p>If u have any question or are getting any issue, contact-me.</p>
+<p>If you have any question or are getting any issue, contact-me.</p>
 <a href="mailto:matheuzhenrik@gmail.com">E-mail</a><br>
 <a href="www.linkedin.com/in/matheuskolln">LinkedIn</a>

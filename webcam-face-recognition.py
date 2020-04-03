@@ -1,6 +1,7 @@
 import face_recognition
 import cv2
 import numpy as np
+import os
 
 # Loading the net from gender classification
 gender_net = cv2.dnn.readNetFromCaffe('deploy_gender.prototxt', 'gender_net.caffemodel')
@@ -21,31 +22,29 @@ def predictGender(image_path):
 # Get a reference to webcam video
 webcam_video = cv2.VideoCapture(0)
 
-# Load a sample picture and learn how to recognize it.
-person1_image = face_recognition.load_image_file("./person1/matheus.JPG")
-person1_face_encoding = face_recognition.face_encodings(person1_image)[0]
-person1_gender = predictGender("./person1/matheus.JPG")
-
-# Load a second sample picture and learn how to recognize it.
-person2_image = face_recognition.load_image_file("./person2/musk.jpg")
-person2_face_encoding = face_recognition.face_encodings(person2_image)[0]
-person2_gender = predictGender("./person2/musk.jpg")
-
 # Create arrays of known face encodings, their names and their genders
-known_face_encodings = [
-    person1_face_encoding,
-    person2_face_encoding
-]
+known_face_encodings = []
+known_face_names = []
+known_gender = []
 
-known_face_names = [
-    "Matheus",
-    "Elon"
-]
+# Path of folder who contains images of each person
+persons_path = "./persons"
+persons = os.listdir(persons_path)
 
-known_gender = [
-    person1_gender,
-    person2_gender
-]
+# Manipulates each image in the folder of persons
+for person in persons:
+    image_path = persons_path + '/' + person
+    filename = person[:-4]
+
+    person_image = face_recognition.load_image_file(image_path)
+    person_face_encoding = face_recognition.face_encodings(person_image)[0]
+    person_name = filename 
+    person_gender = predictGender(image_path)
+    
+    known_face_encodings.append(person_face_encoding)
+    known_face_names.append(person_name)
+    known_gender.append(person_gender)
+    
 
 # Check genders
 print(known_gender)

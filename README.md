@@ -1,6 +1,6 @@
 <h1 align="center">Webcam Face and Gender Recognition</h1>
 <div align="center"><img src="./images/header.jpg" alt="header"></div>
-<p>This Python scripts aims to recognize persons and his genders. It works with OpenCV and Face Recognition API. By Face Recognition a person is predicted and the gender is estimated using Deep Neural Network from Open CV. The script shall analise one image inside a specific folder (with one or n persons), and will return the 128-dimension face encoding for each face in the image. After it predict the gender using the neural network.</b></p>
+<p>This Python script aims to recognize people and their genders. It works with OpenCV and Face Recognition API. By facial recognition, a person is predicted and sex is estimated using Deep Neural Network from OpenCV. The script must analyze an image within a specific folder (with one or n people) and will return 128-dimension face encoding for each face in the image. Then, predict sex using the neural network.</b></p>
 <h2>Requirements</h2>
 <ul>
     <h3>I run the code in this config:</h3>
@@ -11,7 +11,7 @@
         <li>Dlib 19.8.1</li>
         <li>Numpy 1.18.1</li>
     </ul>
-    <h3>You can get here:</h3>
+    <h3>You can get it here:</h3>
     <li>
         <a href="https://www.python.org/downloads/">Python 3.6</a>
     </li><br>
@@ -29,7 +29,7 @@
         <p>If you are in Windows and the first method does not do, try this:</p>
         <pre><code>python -m pip install https://files.pythonhosted.org/packages/0e/ce/f8a3cff33ac03a8219768f0694c5d703c8e037e6aba2e865f9bae22ed63c/dlib-19.8.1-cp36-cp36m-win_amd64.whl#sha256=794994fa2c54e7776659fddb148363a5556468a6d5d46be8dad311722d54bfcf</code></pre>
     </li>
-    <li>
+    <li>d
         <a href="https://numpy.org/doc/">NumPy</a>
         <pre><code>pip install numpy</code></pre>
     </li>

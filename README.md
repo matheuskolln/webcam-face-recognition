@@ -29,7 +29,7 @@
         <p>If you are in Windows and the first method does not do, try this:</p>
         <pre><code>python -m pip install https://files.pythonhosted.org/packages/0e/ce/f8a3cff33ac03a8219768f0694c5d703c8e037e6aba2e865f9bae22ed63c/dlib-19.8.1-cp36-cp36m-win_amd64.whl#sha256=794994fa2c54e7776659fddb148363a5556468a6d5d46be8dad311722d54bfcf</code></pre>
     </li>
-    <li>d
+    <li>
         <a href="https://numpy.org/doc/">NumPy</a>
         <pre><code>pip install numpy</code></pre>
     </li>
@@ -39,12 +39,12 @@
     </li>
 </ul>
 <h2>How to run?</h2>
-<p> First of all, you must put the photos of people in the "persons" folder, the image file must have the person's name. For example, if I wanted Elon Musk to be recognized, I would have to put a photo of him in the persons folder with the file name "Elon Musk". It is essential that the file name is the way the program should call the person. </p>
-<p> After that you can just run the script inside the project's folder: </p>
-<pre> <code>
-     python webcam-face-recognition.py
-</code> </pre>
-<p> This will open a window called Face Recognition, which will recognize and distinguish people according to the photos in the persons folder. If you want to close the window just press <b>"q"</b>.</p>
+<img src="./images/menu.jpg" alt="menu">
+<p>First of all, you need to run in terminal
+    <pre><code>python menu.py</code></pre>
+    After that you can press the button "Put Images", which will open a window to select the people’s images, then you can press the button "Find Faces" and the program will start. 
+    The name of the person’s image must be with their name, otherwise, the program will recognize the person with the image name. </p>
+<p>  This will open a window called Face Recognition, which will recognize and distinguish people according to the photos in the people folder. If you want to close the window just press <b>"q"</b>.</p>
 <h2>Examples:</h2>
 <h3>One person recognitions</h3>
 <img src="./images//one_person.jpg" alt="one-person">

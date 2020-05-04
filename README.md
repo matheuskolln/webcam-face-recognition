@@ -39,7 +39,7 @@
     </li>
 </ul>
 <h2>How to run?</h2>
-<img src="./images/menu.jpg" alt="menu">
+<img src="./images/menu.JPG" alt="menu">
 <p>First of all, you need to run in terminal
     <pre><code>python menu.py</code></pre>
     After that you can press the button "Put Images", which will open a window to select the people’s images, then you can press the button "Find Faces" and the program will start. 
